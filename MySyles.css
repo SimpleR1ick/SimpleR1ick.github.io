@@ -7,3 +7,6 @@ body{
 p{
     color: black;
 }
+ul, ol{
+    color: gray;
+}
