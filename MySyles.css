@@ -1,12 +1,30 @@
 body{
-    color:darkred;
+    color:darkgreen;
     font-size: large;
     font-family: Arial;
     text-align: left;
+    background-color:bisque;
 }
 p{
     color: black;
 }
-ul, ol{
-    color: gray;
+ul{
+    color:black;
+    list-style-type: disc;
+    
+}
+ol{
+    color: black;
+    list-style-type: lower-roman;
+}
+img{
+    width: 200px;;
+       
+}
+a{
+
+    text-decoration: none;
+}
+a:hover{
+    color: chartreuse;
 }
