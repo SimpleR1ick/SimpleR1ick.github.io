@@ -40,10 +40,33 @@ function insereInput(celula) {
         const quadradoCompleto = verificaMatriz();
         if (quadradoCompleto) {
             document.querySelector('#quadradomagico').classList.add('vitoria');
-        } else {
-            document.querySelector('#quadradomagico').classList.remove('vitoria');
-        }
+            document.querySelectorAll('input').forEach(input => {
+                input.readOnly = true;
+            })
+            criaConcluido();
+            criaReiniciar();
+        } 
     });
+}
+
+function criaConcluido() {
+    const concluido = document.createElement('p');
+    parabens.innerText = "Você concluiu o desafio"
+    document.body.append(concluido);
+}
+
+function criaReiniciar() {
+    const reiniciar = document.createElement('button');
+    reiniciar.innerText = "Reiniciar"
+    document.body.append(reiniciar);
+    reiniciar.addEventListener('click', () => {
+        const tabela = document.querySelector('#quadradomagico');
+        const concluido = document.querySelector('p');
+        tabela.remove();
+        concluido.remove();
+        reiniciar.remove();
+        insereTabela();
+    })
 }
 
 function verificaMatriz() {
