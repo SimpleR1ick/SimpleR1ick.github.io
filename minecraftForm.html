@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>No More Lands</title>
+    </head>
+    <body>
+        <!-- Titulo -->
+        <div>
+            <h1 id="titulo">Inscrever-se para o SMP</h1>
+            <br />
+        </div>
+        <form>
+            <!-- Dados -->
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="nome"><strong>Nome</strong></label>
+                    <input type="text" name="nome" id="nome" required />
+                </div>
+
+                <div class="campo">
+                    <label for="discord"><strong>Discord</strong></label>
+                    <input type="text" name="discord" id="discord" required />
+                </div>
+
+                <div class="campo">
+                    <label for="email"><strong>Email</strong></label>
+                    <input type="email" name="email" id="email" required />
+                </div>
+            </fieldset>
+
+            <!-- Tipo de laucher -->
+            <div class="campo">
+                <label><strong>Tipo de laucher</strong></label>
+                <label>
+                    <input
+                        type="radio"
+                        name="laucher"
+                        value="original"
+                        checked
+                    />Original
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="laucher"
+                        value="tlaucher"
+                    />Tlaucher
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="laucher"
+                        value="shiginima"
+                    />Shiginima
+                </label>
+            </div>
+
+            <!-- Nivel de experiencia -->
+            <div>
+                <label for="experiencia"><strong>Experiencia</strong></label>
+                <select id="experiencia" required>
+                    <option selected disabled value="">Selecione</option>
+                    <option>Noob</option>
+                    <option>Casual</option>
+                    <option>Brabo</option>
+                </select>
+            </div>
+
+            <!-- Atividades pretentidas -->
+            <fieldset class="grupo">
+                <div id="check">
+                    <label><strong>O que você pretende fazer.</strong></label
+                    ><br /><br />
+
+                    <label for="pretendencia1"> Construir</label>
+                    <input
+                        type="checkbox"
+                        id="pretendencia1"
+                        name="pretendencia1"
+                        value="Construir"
+                    />
+
+                    <label for="pretendencia2"> Farms</label>
+                    <input
+                        type="checkbox"
+                        id="pretendencia2"
+                        name="pretendencia2"
+                        value="farms"
+                    />
+
+                    <label for="pretendencia3"> Lore</label>
+                    <input
+                        type="checkbox"
+                        id="pretendencia3"
+                        name="pretendencia3"
+                        value="lore"
+                    />
+
+                    <label for="pretendencia4"> Visitar</label>
+                    <input
+                        type="checkbox"
+                        id="pretedencia4"
+                        name="pretedencia4"
+                        value="visitar"
+                    />
+
+                    <label for="pretendencia5"> Jogar na 1.18</label>
+                    <input
+                        type="checkbox"
+                        id="pretedencia5"
+                        name="pretedencia5"
+                        value="1.18"
+                    />
+
+                    <label for="pretendencia6"> Jogar na 1.17</label>
+                    <input
+                        type="checkbox"
+                        id="pretedencia6"
+                        name="pretedencia6"
+                        value="1.17"
+                    />
+
+                    <label for="pretendencia7"> Roleplay</label>
+                    <input type="checkbox" id="pretendencia7"
+                    name="pretendencia7 value="roleplay">
+                </div>
+            </fieldset>
+        </form>
+    </body>
+</html>
