@@ -1,41 +1,46 @@
-body {
-    text-align: center;
+html {
+    display: table;
+    margin: auto;
 }
-
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
 table {
     border-collapse: collapse;
     margin: auto;
 }
-
-td {
-    border: solid 1px;
-}
-
 input {
     width: 3em;
     height: 3em;
     text-align: center;
     font-size: larger;
 }
+td {
+    border: solid 1px;
+}
 
-.somaerradacoluna input, 
-.somaerradalinha input, 
-.somaerradadiagonalsecundaria input, 
-.somaerradadiagonalprincipal input {
+/* Identificadores para soma incorreta */
+.somaErradaColuna input,
+.somaErradaLinha input,
+.somaErradaDiagonalSecundaria input,
+.somaErradaDiagonalPrincipal input {
     color: orange;
     border: solid;
     border-color: orange;
     border-width: 10px;
 }
 
-.foradoslimites input,
-.numerosrepetidos input {
+/* Identificador para numeros > 9*/
+.foraDosLimites input,
+.numerosRepetidos input {
     color: red;
     border: solid;
     border-color: red;
     border-width: 10px;
 }
 
+/* Grade verde quando vencer */
 .vitoria tr td input {
     color: green;
     border: solid;

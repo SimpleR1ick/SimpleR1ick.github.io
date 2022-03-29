@@ -1,3 +1,10 @@
+// Autor: Henrique Dalmagro
+// Matricula: 20201tiimi0365
+/* #########################
+Quadrado magico !
+######################### */
+
+// Variaveis globais
 const ordem = 3
 const somaNumeros = 15
 const matriz = Array(ordem)
@@ -119,6 +126,7 @@ function somaValores(total, celula) {
 function verificaSomaCelulas(celulas, classe) {
     if (celulas.some(celulaVazia)) return false
     const soma = celulas.reduce(somaValores, 0)
+
     if (soma != somaNumeros) {
         acaoClasseCelulas(atribuiClasseCelula, classe, celulas)
         return false
@@ -140,7 +148,7 @@ function verificaSomaColuna(j) {
     for (let i = 0; i < ordem; i++) {
         celulas[i] = [i, j]
     }
-    return verificaSomaCelulas(celulas, 'somaerradacoluna')
+    return verificaSomaCelulas(celulas, 'somaErradaColuna')
 }
 
 function verificaSomaLinha(j) {
@@ -148,7 +156,7 @@ function verificaSomaLinha(j) {
     for (let i = 0; i < ordem; i++) {
         celulas[i] = [j, i]
     }
-    return verificaSomaCelulas(celulas, 'somaerradalinha')
+    return verificaSomaCelulas(celulas, 'somaErradaLinha')
 }
 
 function verificaSomaDiagonalSecundaria() {
@@ -156,7 +164,7 @@ function verificaSomaDiagonalSecundaria() {
     for (let i = 0; i < ordem; i++) {
         celulas[i] = [i, ordem - i - 1]
     }
-    return verificaSomaCelulas(celulas, 'somaerradadiagonalsecundaria')
+    return verificaSomaCelulas(celulas, 'somaErradaDiagonalSecundaria')
 }
 
 function verificaSomaDiagonalPrincipal() {
@@ -164,7 +172,7 @@ function verificaSomaDiagonalPrincipal() {
     for (let i = 0; i < ordem; i++) {
         celulas[i] = [i, i]
     }
-    return verificaSomaCelulas(celulas, 'somaerradadiagonalprincipal')
+    return verificaSomaCelulas(celulas, 'somaErradaDiagonalPrincipal')
 }
 
 function verificaNumerosForaDosLimites() {
@@ -175,9 +183,9 @@ function verificaNumerosForaDosLimites() {
         for (let j = 0; j < ordem; j++) {
             if (matriz[i][j] < minimo || matriz[i][j] > maximo) {
                 numerosForaDosLimites = true
-                atribuiClasseCelula('foradoslimites', i, j)
+                atribuiClasseCelula('foraDosLimites', i, j)
             } else {
-                removeClasseCelula('foradoslimites', i, j)
+                removeClasseCelula('foraDosLimites', i, j)
             }
         }
     }
@@ -200,9 +208,9 @@ function verificaNumerosRepetidos() {
             const valor = matriz[i][j]
             if (!isNaN(valor) && numeros[valor - 1] > 1) {
                 numerosRepetidos = true
-                atribuiClasseCelula('numerosrepetidos', i, j)
+                atribuiClasseCelula('numerosRepetidos', i, j)
             } else {
-                removeClasseCelula('numerosrepetidos', i, j)
+                removeClasseCelula('numerosRepetidos', i, j)
             }
         }
     }
