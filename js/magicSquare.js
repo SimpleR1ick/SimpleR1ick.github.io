@@ -8,6 +8,7 @@ Quadrado magico !
 const ordem = 3
 const somaNumeros = 15
 const matriz = Array(ordem)
+
 for (let i = 0; i < matriz.length; i++) {
     matriz[i] = Array(ordem)
 }
@@ -24,6 +25,7 @@ function insereTabela() {
     for (let i = 0; i < ordem; i++) {
         const linha = document.createElement('tr')
         tabela.append(linha)
+
         for (let j = 0; j < ordem; j++) {
             const celula = document.createElement('td')
             linha.append(celula)
@@ -35,6 +37,7 @@ function insereTabela() {
 
 function getLinhaColuna(celula) {
     const [linha, coluna] = celula.id.split('col')
+
     return [linha.split('lin')[1], coluna]
 }
 
@@ -46,6 +49,7 @@ function insereInput(celula) {
         const [linha, coluna] = getLinhaColuna(celula)
         matriz[linha][coluna] = valor
         const quadradoCompleto = verificaMatriz()
+
         if (quadradoCompleto) {
             document.querySelector('#quadradomagico').classList.add('vitoria')
             document.querySelectorAll('input').forEach(input => {
@@ -132,8 +136,8 @@ function verificaSomaCelulas(celulas, classe) {
         return false
     } else {
         acaoClasseCelulas(removeClasseCelula, classe, celulas)
+        return true
     }
-    return true
 }
 
 function acaoClasseCelulas(acao, classe, celulas) {
@@ -179,6 +183,7 @@ function verificaNumerosForaDosLimites() {
     const minimo = 1
     const maximo = ordem ** 2
     let numerosForaDosLimites = false
+
     for (let i = 0; i < ordem; i++) {
         for (let j = 0; j < ordem; j++) {
             if (matriz[i][j] < minimo || matriz[i][j] > maximo) {
@@ -195,6 +200,7 @@ function verificaNumerosForaDosLimites() {
 function verificaNumerosRepetidos() {
     const numeros = Array(ordem ** 2).fill(0)
     let numerosRepetidos = false
+
     for (let i = 0; i < ordem; i++) {
         for (let j = 0; j < ordem; j++) {
             const valor = matriz[i][j]
@@ -206,6 +212,7 @@ function verificaNumerosRepetidos() {
     for (let i = 0; i < ordem; i++) {
         for (let j = 0; j < ordem; j++) {
             const valor = matriz[i][j]
+
             if (!isNaN(valor) && numeros[valor - 1] > 1) {
                 numerosRepetidos = true
                 atribuiClasseCelula('numerosRepetidos', i, j)
