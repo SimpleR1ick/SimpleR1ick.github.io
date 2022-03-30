@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     insereTabela()
 })
 
+// Cria a tabela 3X3
 function insereTabela() {
     const tabela = document.createElement('table')
     tabela.id = 'quadradomagico'
@@ -44,6 +45,7 @@ function getLinhaColuna(celula) {
 function insereInput(celula) {
     const input = document.createElement('input')
     celula.append(input)
+
     input.addEventListener('change', () => {
         const valor = parseInt(input.value)
         const [linha, coluna] = getLinhaColuna(celula)
@@ -61,6 +63,7 @@ function insereInput(celula) {
     })
 }
 
+// Mensagem de vitoria
 function criaConcluido() {
     const concluido = document.createElement('p')
     parabens.innerText = 'Você concluiu o desafio'
@@ -71,6 +74,7 @@ function criaReiniciar() {
     const reiniciar = document.createElement('button')
     reiniciar.innerText = 'Reiniciar'
     document.body.append(reiniciar)
+
     reiniciar.addEventListener('click', () => {
         const tabela = document.querySelector('#quadradomagico')
         const concluido = document.querySelector('p')
@@ -147,6 +151,7 @@ function acaoClasseCelulas(acao, classe, celulas) {
     })
 }
 
+// Essas funções verifica a soma das colunas, linhas e diagonais
 function verificaSomaColuna(j) {
     let celulas = []
     for (let i = 0; i < ordem; i++) {
@@ -197,6 +202,7 @@ function verificaNumerosForaDosLimites() {
     return numerosForaDosLimites
 }
 
+// Verifica se existe algum numero repetido na matriz
 function verificaNumerosRepetidos() {
     const numeros = Array(ordem ** 2).fill(0)
     let numerosRepetidos = false
