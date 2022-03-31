@@ -63,7 +63,6 @@ function insereInput(celula) {
     })
 }
 
-// Mensagem de vitoria
 function criaConcluido() {
     const concluido = document.createElement('p')
     parabens.innerText = 'Você concluiu o desafio'
@@ -97,6 +96,7 @@ function verificaSomas() {
     const diagonalSegundariaOK = verificaSomaDiagonalSecundaria()
     const todasLinhasOK = verificaSomaLinhas()
     const todasColunasOK = verificaSomaColunas()
+
     return (
         diagonalPrincpalOK &&
         diagonalSegundariaOK &&
