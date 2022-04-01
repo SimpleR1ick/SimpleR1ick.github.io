@@ -1,30 +1,34 @@
-body{
-    color:darkgreen;
+body {
+    color: darkgreen;
     font-size: large;
     font-family: Arial;
     text-align: left;
-    background-color:bisque;
+    background-color: bisque;
 }
-p{
+
+p {
     color: black;
 }
-ul{
-    color:black;
+
+ul {
+    color: black;
     list-style-type: disc;
-    
 }
-ol{
+
+ol {
     color: black;
     list-style-type: lower-roman;
 }
-img{
-    width: 200px;;
-       
+
+img {
+    width: 200px;
 }
-a{
+
+a {
 
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     color: chartreuse;
 }

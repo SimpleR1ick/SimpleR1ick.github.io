@@ -2,20 +2,24 @@ html {
     display: table;
     margin: auto;
 }
+
 body {
     display: table-cell;
     vertical-align: middle;
 }
+
 table {
     border-collapse: collapse;
     margin: auto;
 }
+
 input {
     width: 3em;
     height: 3em;
     text-align: center;
     font-size: larger;
 }
+
 td {
     border: solid 1px;
 }
