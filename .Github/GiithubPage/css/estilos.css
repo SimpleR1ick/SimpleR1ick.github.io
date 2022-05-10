@@ -1,0 +1,17 @@
+p {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+body {
+    font-family: 'Times New Roman',
+        Times,
+        serif;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+img {
+    width: auto;
+    height: auto;
+}
