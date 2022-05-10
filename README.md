@@ -1,1 +1,1 @@
-https://simpler1ick.github.io/PW1/
+https://simpler1ick.github.io
